@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samir Pokhrel | Professional Portfolio</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #3b82f6;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --text: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, #1e3a8a 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--dark);
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* Impressive Feature: Interactive Skill Bars */
+        .skill-container {
+            margin-bottom: 15px;
+        }
+
+        .skill-label {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .skill-bar {
+            background: #e2e8f0;
+            height: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            height: 100%;
+            border-radius: 6px;
+            width: 0;
+            transition: width 1.5s cubic-bezier(0.1, 1, 0.1, 1);
+        }
+
+        /* Manager Section Feature */
+        .manager-badge {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+            padding: 20px;
+            border-left: 5px solid var(--primary);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .manager-avatar {
+            width: 60px;
+            height: 60px;
+            background: var(--dark);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-right: 20px;
+        }
+
+        .manager-info h4 {
+            color: var(--dark);
+            font-size: 1.2rem;
+            margin-bottom: 2px;
+        }
+
+        .manager-info p {
+            font-size: 0.9rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Samir Pokhrel</h1>
+        <p>Innovator | Developer | Tech Specialist</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="grid">
+            <div class="card">
+                <h2>About Me</h2>
+                <p>Welcome to my official space. I am a dedicated professional passionate about building scalable solutions, optimizing workflows, and driving technological impact. Turning complex problems into elegant, functional digital realities is my core expertise.</p>
+            </div>
+
+            <div class="card">
+                <h2>Leadership & Reporting</h2>
+                <p>Operating under top-tier organizational guidance to ensure project delivery meets the highest corporate and technical standards.</p>
+                
+                <div class="manager-badge">
+                    <div class="manager-avatar">S</div>
+                    <div class="manager-info">
+                        <h4>Sushant</h4>
+                        <p>Reporting Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 40px;">
+            <h2>Core Competencies</h2>
+            <p style="margin-bottom: 25px;">A data-driven look at my primary technical and execution strengths:</p>
+            
+            <div class="skill-container">
+                <div class="skill-label"><span>Full-Stack Development</span><span>95%</span></div>
+                <div class="skill-bar"><div class="skill-progress" data-progress="95%"></div></div>
+            </div>
+
+            <div class="skill-container">
+                <div class="skill-label"><span>Project Architecture</span><span>88%</span></div>
+                <div class="skill-bar"><div class="skill-progress" data-progress="88%"></div></div>
+            </div>
+
+            <div class="skill-container">
+                <div class="skill-label"><span>Agile & Team Collaboration</span><span>92%</span></div>
+                <div class="skill-bar"><div class="skill-progress" data-progress="92%"></div></div>
+            </div>
+
+            <div class="skill-container">
+                <div class="skill-label"><span>UI/UX Optimization</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-progress" data-progress="85%"></div></div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Samir Pokhrel. All Rights Reserved. Managed under the leadership of Sushant.</p>
+    </footer>
+
+    <script>
+        // Animate skill bars automatically on page load
+        document.addEventListener("DOMContentLoaded", () => {
+            const progressBars = document.querySelectorAll('.skill-progress');
+            setTimeout(() => {
+                progressBars.forEach(bar => {
+                    const progress = bar.getAttribute('data-progress');
+                    bar.style.width = progress;
+                });
+            }, 300); 
+        });
+    </script>
+</body>
+</html>
